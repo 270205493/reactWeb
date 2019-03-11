@@ -11,7 +11,6 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
-
     module: {
         rules: [
             {
@@ -133,7 +132,6 @@ module.exports = {
                 target: 'http://47.105.35.207'
             }
         }
-
     },
     plugins: [
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/),
