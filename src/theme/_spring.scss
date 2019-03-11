@@ -1,0 +1,51 @@
+/**
+ * Created by ddxx on 2018/1/16.
+ * 默认主题变量定义
+ */
+
+$theme: "spring";
+
+$primary-color: #D03B33;
+$text-color: #FFFFFF;
+$disabled-text-color: gray;
+$font-size-base: 14px;
+
+$border-color-base: #db8949;
+
+$background-color-base: #A00000;
+
+//选中和鼠标移入颜色
+$select-color: #af0000;
+$hover-color: #920000;
+$item-color: #D03B33;
+
+//容器头部颜色和内容背景色
+$heading-color: rgba(160, 0, 0, 0.6);
+$container-bg-color: rgba(160, 0, 0, 0.4);
+
+$widget-head-title-color: #FFFE5E;
+$widget-content-bg-color: rgba(112, 6, 0, 0.36);
+
+
+@mixin border($color: $border-color-base, $width: 1px, $style: solid, $important: false) {
+  @if $important {
+    border: $width $style $color!important;
+  } @else {
+    border: $width $style $color;
+  }
+}
+
+//省略号混合器
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+//阴影样式
+@mixin shadow {
+  box-shadow: 0 0 6px #000000;
+}
+
+
+
