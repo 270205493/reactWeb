@@ -17,14 +17,18 @@ module.exports = {
             {
                 test:/\.tsx?$/,
                 use: [
-                    'babel-loader',
+                    {
+                        loader: "babel-loader",
+                        options: {
+                            presets: [
+                                "env",
+                                "stage-0"
+                            ],
+                            plugins: ["transform-decorators-legacy"]
+                        }
+                    },
                     'ts-loader'
-                ],
-                "presets": [
-                    "env",
-                    "stage-0"
-                ],
-                "plugins": ["transform-decorators-legacy"]
+                ]
             },
             {
                 test: /\.(js|jsx)$/,
